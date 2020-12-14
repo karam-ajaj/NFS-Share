@@ -39,3 +39,10 @@ iptables-save | sudo tee /etc/sysconfig/iptables-config
 8. Run the following command in a command prompt (not Powershell) to set the NFS configuration:
   8a. *nfsadmin client localhost config fileaccess=755 SecFlavors=+sys -krb5 -krb5i*
 9. mount the share on Windows server: mount -o anon \\<nfs server>\<exported share path> <drive letter>:
+
+
+1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
