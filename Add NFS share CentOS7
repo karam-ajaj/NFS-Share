@@ -1,5 +1,5 @@
 # Server
-
+```shell
 * yum -y install nfs-utils
 * systemctl enable nfs-server.service
 * systemctl start nfs-server.service
@@ -22,3 +22,4 @@
 * systemctl disable firewalld
 * sudo iptables -A INPUT -s 172.25.44.0/24 -j ACCEPT
 * iptables-save | sudo tee /etc/sysconfig/iptables-config
+```
