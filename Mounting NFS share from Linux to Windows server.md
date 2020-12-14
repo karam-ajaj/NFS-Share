@@ -28,11 +28,12 @@ iptables-save | sudo tee /etc/sysconfig/iptables-config
 
 # Steps on the client
 1. Start Windows Powershell as the administrator
-2. Verify that the feature is available using the command Get-WindowsFeature -Name NFS*
+2. Verify that the feature is available using the command
+   - *Get-WindowsFeature -Name NFS*
 3. Run the command
-   - Install-WindowsFeature -Name NFS-Client to install the feature
+   - *Install-WindowsFeature -Name NFS-Client to install the feature*
 4. Open command prompt as admin and run command
-   - *nfsadmin client stop
+   - *nfsadmin client stop*
 5. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default
 6. Add new DWORD 32-bit as follows
    - *AnonymousUID value 65534 binary*
