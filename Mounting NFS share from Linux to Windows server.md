@@ -48,8 +48,8 @@ iptables-save | sudo tee /etc/sysconfig/iptables-config
 1. Open command prompt as admin and run command nfsadmin client stop
 1. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default
 1. Add new DWORD 32-bit as follows
-  1. *AnonymousUID value 65534 binary*
-  1. *AnonymousGID value 65534 binary*
+   *AnonymousUID value 65534 binary*
+   *AnonymousGID value 65534 binary*
 1. In the command prompt opened as admin, type nfsadmin client start
 1. Run the following command in a command prompt (not Powershell) to set the NFS configuration:
    1. *nfsadmin client localhost config fileaccess=755 SecFlavors=+sys -krb5 -krb5i*
