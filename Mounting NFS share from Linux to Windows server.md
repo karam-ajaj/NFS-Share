@@ -29,7 +29,7 @@ iptables-save | sudo tee /etc/sysconfig/iptables-config
 # Steps on the client
 1. Start Windows Powershell as the administrator
 2. Verify that the feature is available using the command
-   - *Get-WindowsFeature -Name NFS*
+   - *Get-WindowsFeature -Name NFS**
 3. Run the command
    - *Install-WindowsFeature -Name NFS-Client to install the feature*
 4. Open command prompt as admin and run command
