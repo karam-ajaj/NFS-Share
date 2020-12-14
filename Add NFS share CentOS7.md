@@ -1,5 +1,5 @@
 # Server
-```javascript
+```shell
 * yum -y install nfs-utils
 * systemctl enable nfs-server.service
 * systemctl start nfs-server.service
