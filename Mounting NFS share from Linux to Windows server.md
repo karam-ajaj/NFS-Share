@@ -33,6 +33,7 @@ iptables-save | sudo tee /etc/sysconfig/iptables-config
 4. Open command prompt as admin and run command nfsadmin client stop
 5. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default
 6. Add new DWORD 32-bit as follows
+
 *AnonymousUID value 65534 binary*
 *AnonymousGID value 65534 binary*
 7. In the command prompt opened as admin, type nfsadmin client start
