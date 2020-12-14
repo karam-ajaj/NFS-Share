@@ -34,7 +34,7 @@ vi /etc/exports
 exportfs -ra
 ```
 
-Client
+# Client
 ```shell
 yum -y install nfs-utils
 mkdir /data/intershop/eserver1/share
