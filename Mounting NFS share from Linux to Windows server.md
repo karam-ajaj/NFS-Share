@@ -41,9 +41,18 @@ iptables-save | sudo tee /etc/sysconfig/iptables-config
 9. mount the share on Windows server:
   - mount -o anon \\<nfs server>\<exported share path> <drive letter>:
 
+# Steps on the client
+1. Start Windows Powershell as the administrator
+1. Verify that the feature is available using the command Get-WindowsFeature -Name NFS*
+1. Run the command Install-WindowsFeature -Name NFS-Client to install the feature
+1. Open command prompt as admin and run command nfsadmin client stop
+1. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default
+1. Add new DWORD 32-bit as follows
+  1. *AnonymousUID value 65534 binary*
+  1. *AnonymousGID value 65534 binary*
+1. In the command prompt opened as admin, type nfsadmin client start
+1. Run the following command in a command prompt (not Powershell) to set the NFS configuration:
+   1. *nfsadmin client localhost config fileaccess=755 SecFlavors=+sys -krb5 -krb5i*
+1. mount the share on Windows server:
+  - mount -o anon \\<nfs server>\<exported share path> <drive letter>:
 
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
